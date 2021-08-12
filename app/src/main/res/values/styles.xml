@@ -13,4 +13,19 @@
         <item name="android:windowBackground">@drawable/splash_screen</item>
     </style>
 
+    <style name="button_home" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textColor">@color/chat_text</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:layout_marginStart">30dp</item>
+        <item name="android:layout_marginEnd">30dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:alpha">0.80</item>
+        <item name="android:background">@drawable/button_rounded</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:paddingStart">22dp</item>
+    </style>
+
 </resources>

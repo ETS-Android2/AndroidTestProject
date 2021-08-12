@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:background="@drawable/gpc_background"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -14,25 +13,25 @@
         android:orientation="vertical">
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/button_home"
+            android:drawableLeft="@drawable/ic_chat"
+            android:layout_marginTop="214dp"
             android:onClick="onChatClicked"
-            android:text="@string/chat_button"
-            android:textSize="@dimen/button_text_size" />
+            android:text="@string/chat_button" />
+
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/button_home"
+            android:drawableLeft="@drawable/ic_lock"
             android:onClick="onLoginClicked"
-            android:text="@string/login_button"
-            android:textSize="@dimen/button_text_size" />
+            android:text="@string/login_button" />
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/button_home"
+            android:drawableLeft="@drawable/ic_animation"
+            android:layout_marginBottom="213dp"
             android:onClick="onAnimationClicked"
-            android:text="@string/animation_button"
-            android:textSize="@dimen/button_text_size" />
+            android:text="@string/animation_button" />
 
     </LinearLayout>
 

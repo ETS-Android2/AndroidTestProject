@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
          * =========================================================================================
          */
 
-        // TODO: Make the UI look like it does in the mock-up
+        // DONE: Make the UI look like it does in the mock-up
         // TODO: Add a ripple effect when the buttons are clicked
     }
 
