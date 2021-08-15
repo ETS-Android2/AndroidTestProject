@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MenuItem;
 
 import com.datechnologies.androidtest.MainActivity;
 import com.datechnologies.androidtest.R;
@@ -97,9 +98,23 @@ public class ChatActivity extends AppCompatActivity {
 
     }
 
+    // Button animations to move to previous (back) activity
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        if (item.getItemId() == android.R.id.home)
+        {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     @Override
     public void onBackPressed()
     {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.coming_in, R.anim.coming_out);
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
