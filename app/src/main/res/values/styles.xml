@@ -8,11 +8,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Theme for the splash screen -->
     <style name="SplashScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowBackground">@drawable/splash_screen</item>
     </style>
 
+    <!-- Home button specifications -->
     <style name="button_home" parent="TextAppearance.AppCompat.Button">
         <item name="android:textColor">@color/chat_text</item>
         <item name="android:textSize">@dimen/button_text_size</item>
@@ -26,6 +28,28 @@
         <item name="android:background">@drawable/button_rounded</item>
         <item name="android:drawablePadding">16dp</item>
         <item name="android:paddingStart">22dp</item>
+    </style>
+
+    <!-- Blue button specifications -->
+    <style name="button_blue" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textColor">@color/button_text</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:background">@drawable/button_blue</item>
+    </style>
+
+    <!-- Login UI -->
+    <style name="login_ui">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">30dp</item>
+        <item name="android:layout_marginEnd">30dp</item>
+        <item name="android:textColor">@color/chat_text</item>
+        <item name="android:textSize">16sp</item>
+
+
     </style>
 
 </resources>

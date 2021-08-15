@@ -7,4 +7,11 @@
     <string name="login_button">LOGIN</string>
     <string name="animation_button">ANIMATION</string>
 
+    <!-- Login Screen Strings -->
+    <string name="password_hint">Password</string>
+    <string name="default_username">info@DATechnologies.co</string>
+    <string name="login_successful">Login Successful!</string>
+    <string name="login_failed">Login Failed!</string>
+    <string name="login_confirm_button">OK</string>
+
 </resources>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Add background and logo separately. JPG causes cut off issues -->
+    <!-- Add background for theme. JPG may cause slight cut off issue. -->
     <item android:drawable="@drawable/gpc_splash"> </item>
 </layer-list>

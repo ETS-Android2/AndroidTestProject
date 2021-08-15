@@ -1,10 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:background="@drawable/gpc_sunset"
     tools:context=".login.LoginActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#33FFFFFF"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editTextTextEmailAddress"
+            style="@style/login_ui"
+            android:layout_marginTop="24dp"
+            android:inputType="textEmailAddress"
+            android:layoutDirection="inherit"
+            android:text="@string/default_username"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            style="@style/login_ui"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/horizontal_bar"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"
+            android:paddingBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@id/login_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+
+        <Button
+            android:id="@+id/login_button"
+            style="@style/button_blue"
+            android:onClick="onLoginButtonClick"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="@string/login_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextTextPassword" />
+
+    </android.support.constraint.ConstraintLayout>
 
 </RelativeLayout>

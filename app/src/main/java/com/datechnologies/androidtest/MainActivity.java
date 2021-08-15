@@ -13,10 +13,12 @@ import com.datechnologies.androidtest.login.LoginActivity;
  *
  */
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+{
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setTitle(R.string.activity_main_title);
@@ -42,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
          */
 
         // DONE: Make the UI look like it does in the mock-up
-        // TODO: Add a ripple effect when the buttons are clicked
+        // DONE: Add a ripple effect when the buttons are clicked
     }
 
     //==============================================================================================

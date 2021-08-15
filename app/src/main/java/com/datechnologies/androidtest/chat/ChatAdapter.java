@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.datechnologies.androidtest.R;
 import com.datechnologies.androidtest.api.ChatLogMessageModel;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,6 +66,10 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
         ChatLogMessageModel chatLogMessageModel = chatLogMessageModelList.get(position);
 
         viewHolder.messageTextView.setText(chatLogMessageModel.message);
+
+        /*Load Avatar URL into Image View
+            Picasso.get().load(chatLogMessageModel.avatarUrl).into(viewHolder.avatarImageView);
+         */
     }
 
     @Override
