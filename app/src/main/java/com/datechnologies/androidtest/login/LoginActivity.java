@@ -136,7 +136,7 @@ public class LoginActivity extends AppCompatActivity
                 String message = "Code: " + response.code() +
                                 "\n\nMessage: " + response.message() +
                                 "\n\nDuration: " + duration + " ms";
-                showAlertDialogue(message, response.code());
+                showAlertDialogue(message, response.isSuccessful());
             }
 
             @Override
@@ -148,7 +148,7 @@ public class LoginActivity extends AppCompatActivity
 
     }
 
-    public void showAlertDialogue(String message, final int responseCode)
+    public void showAlertDialogue(String message, final boolean responseSuccessful)
     {
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
         View customLayout = getLayoutInflater().inflate(R.layout.alert_dialogue, null);
@@ -160,7 +160,7 @@ public class LoginActivity extends AppCompatActivity
         Button positiveButton = customLayout.findViewById(R.id.ok_button);
 
         // Customize Alert Dialogue based on HTTP code response
-        if (responseCode != 200)
+        if (!responseSuccessful)
         {
             title.setText(R.string.login_failed);
             icon.setImageResource(R.drawable.ic_close);
@@ -173,7 +173,7 @@ public class LoginActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                if (responseCode != 200)
+                if (!responseSuccessful)
                 {
                     dialogue.dismiss();
                     return;

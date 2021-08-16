@@ -15,7 +15,8 @@ public class ChatData
         this.chatLogMessages = chatLogMessages;
     }
 
-    public List<ChatLogMessageModel> getChatLogMessages() {
+    public List<ChatLogMessageModel> getChatLogMessages()
+    {
         return chatLogMessages;
     }
 
