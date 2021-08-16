@@ -5,4 +5,6 @@
 
     <!-- Text Sizes -->
     <dimen name="button_text_size">16sp</dimen>
+    <dimen name="username_text_size">13sp</dimen>
+    <dimen name="message_text_size">15sp</dimen>
 </resources>

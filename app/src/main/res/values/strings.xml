@@ -14,4 +14,13 @@
     <string name="login_failed">Login Failed!</string>
     <string name="login_confirm_button">OK</string>
 
+    <!-- Chat Screen Strings -->
+    <string name="dummy_text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Suspendisse pharetra, sapien at luctus semper,
+        justo dui accumsan lorem,
+        nec pretium dui eros pharetra leo.
+    </string>
+    <string name="default_name">James</string>
+
 </resources>

@@ -9,4 +9,5 @@
     <color name="button_text">#FFFFFF</color>
     <color name="hint_text">#5F6063</color>
     <color name="line">#7B7B7E</color>
+    <color name="bubble">#EFEFEF</color>
 </resources>

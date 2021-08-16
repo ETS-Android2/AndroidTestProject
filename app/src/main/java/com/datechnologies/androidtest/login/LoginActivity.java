@@ -63,6 +63,7 @@ public class LoginActivity extends AppCompatActivity
         actionBar.setDisplayShowHomeEnabled(true);
 
         usernameView = findViewById(R.id.editTextTextEmailAddress);
+        usernameView.setSelection(usernameView.getText().length());
         passwordView = findViewById(R.id.editTextTextPassword);
 
         // DONE: Make the UI look like it does in the mock-up. Allow for horizontal screen rotation.

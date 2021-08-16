@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.datechnologies.androidtest.R;
 import com.datechnologies.androidtest.api.ChatLogMessageModel;
+import com.datechnologies.androidtest.transform.CircleTransform;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -64,12 +65,14 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
     public void onBindViewHolder(ChatViewHolder viewHolder, int position)
     {
         ChatLogMessageModel chatLogMessageModel = chatLogMessageModelList.get(position);
-
+        viewHolder.usernameTextView.setText(chatLogMessageModel.username);
         viewHolder.messageTextView.setText(chatLogMessageModel.message);
 
-        /*Load Avatar URL into Image View
-            Picasso.get().load(chatLogMessageModel.avatarUrl).into(viewHolder.avatarImageView);
-         */
+        //Load Avatar URL into Image View with Circle transformation
+        Picasso.get()
+                .load(chatLogMessageModel.avatarUrl)
+                .transform(new CircleTransform())
+                .into(viewHolder.avatarImageView);
     }
 
     @Override
@@ -86,12 +89,14 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
     {
         ImageView avatarImageView;
         TextView messageTextView;
+        TextView usernameTextView;
 
         public ChatViewHolder(View view)
         {
             super(view);
-            avatarImageView = (ImageView)view.findViewById(R.id.avatarImageView);
-            messageTextView = (TextView)view.findViewById(R.id.messageTextView);
+            avatarImageView = view.findViewById(R.id.avatarImageView);
+            usernameTextView = view.findViewById(R.id.usernameTextView);
+            messageTextView = view.findViewById(R.id.messageTextView);
         }
     }
 
