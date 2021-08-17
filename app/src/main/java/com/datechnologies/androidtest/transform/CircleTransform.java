@@ -7,6 +7,10 @@ import android.graphics.Paint;
 
 import com.squareup.picasso.Transformation;
 
+/**
+ * Class that creates a new bitmap from a Bitmap source object by squaring then cropping the edges
+ * to draw a new bitmap. Returns the circle bitmap and a value, 'key', that is used for caching in Picasso.
+ */
 public class CircleTransform implements Transformation {
 
     @Override

@@ -149,6 +149,7 @@ public class LoginActivity extends AppCompatActivity
 
     }
 
+    // Creates a Custom Alert Dialogue based on HTTP code response
     public void showAlertDialogue(String message, final boolean responseSuccessful)
     {
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
@@ -160,7 +161,6 @@ public class LoginActivity extends AppCompatActivity
         ImageView icon = customLayout.findViewById(R.id.login_icon);
         Button positiveButton = customLayout.findViewById(R.id.ok_button);
 
-        // Customize Alert Dialogue based on HTTP code response
         if (!responseSuccessful)
         {
             title.setText(R.string.login_failed);

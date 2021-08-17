@@ -70,6 +70,7 @@ public class ChatActivity extends AppCompatActivity {
                 LinearLayoutManager.VERTICAL,
                 false));
 
+        // Create a retrofit instance to connect to the REST API web service
         Retrofit retrofit = RetrofitClient.getRetrofitInstance();
 
         ChatLogAPI chatLogAPI = retrofit.create(ChatLogAPI.class);

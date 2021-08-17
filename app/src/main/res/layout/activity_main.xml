@@ -12,31 +12,13 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <!--<FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" -->
+        <Button
+            style="@style/button_home"
+            android:layout_marginTop="214dp"
+            android:drawableStart="@drawable/ic_chat"
+            android:text="@string/chat_button"
+            android:onClick="onChatClicked" />
 
-            <Button
-                style="@style/button_home"
-                android:layout_marginTop="214dp"
-                android:drawableStart="@drawable/ic_chat"
-                android:text="@string/chat_button"
-                android:onClick="onChatClicked" />
-
-            <!-- You can use API 21 for the built in ripple effect. I hard coded a solution to be
-                 compatible with API 19 (the minimum SDK).
-            <Button
-
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="214dp"
-                android:layout_marginEnd="30dp"
-                android:background="?android:selectableItemBackground"
-                android:onClick="onChatClicked"
-                tools:ignore="SpeakableTextPresentCheck" /> -->
-
-        <!--/FrameLayout-->
         <Button
             style="@style/button_home"
             android:drawableStart="@drawable/ic_lock"

@@ -1,11 +1,12 @@
-/* Custom view for cleaner organization and improve accessibility
- */
 package com.datechnologies.androidtest.animation;
+
 import android.content.Context;
 import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-
+/** Custom view for managing onTouch request from ImageView and for cleaner organization and
+ * improve accessibility
+ */
 public class AnimatedLogoView extends AppCompatImageView
 {
     float x;
@@ -19,22 +20,26 @@ public class AnimatedLogoView extends AppCompatImageView
         super(context, attrs);
     }
 
-    public AnimatedLogoView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public AnimatedLogoView(Context context, AttributeSet attrs, int defStyleAttr)
+    {
         super(context, attrs, defStyleAttr);
     }
 
 
     @Override
-    public boolean performClick() {
+    public boolean performClick()
+    {
         return super.performClick();
 
     }
 
     @Override
-    public boolean onTouchEvent(MotionEvent motionEvent) {
+    public boolean onTouchEvent(MotionEvent motionEvent)
+    {
         super.onTouchEvent(motionEvent);
         float dx, dy;
-        switch (motionEvent.getAction()) {
+        switch (motionEvent.getAction())
+        {
             case MotionEvent.ACTION_DOWN: {
                 x = motionEvent.getX();
                 y = motionEvent.getY();

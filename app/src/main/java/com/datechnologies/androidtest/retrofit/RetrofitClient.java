@@ -1,11 +1,12 @@
 package com.datechnologies.androidtest.retrofit;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+/**
+ * Class which creates the Retrofit API Client that helps application connect to REST web services
+ * and adapts Java code to send/receive HTTP request and calls.
+ */
 public class RetrofitClient
 {
     private static Retrofit retrofit;

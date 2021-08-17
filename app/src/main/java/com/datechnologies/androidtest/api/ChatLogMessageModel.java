@@ -8,6 +8,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class ChatLogMessageModel
 {
+    // Use SerializedName since field data is different in web service
     @SerializedName("user_id")
     public int userId;
     @SerializedName("avatar_url")

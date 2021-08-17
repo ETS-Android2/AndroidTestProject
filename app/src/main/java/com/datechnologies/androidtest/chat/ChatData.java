@@ -5,6 +5,9 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+/**
+ * Data Model used to store data obtained from REST API POST call
+ */
 public class ChatData
 {
     @SerializedName("data")
