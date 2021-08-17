@@ -1,11 +1,13 @@
 package com.datechnologies.androidtest.animation;
-
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.datechnologies.androidtest.MainActivity;
 import com.datechnologies.androidtest.R;
@@ -16,6 +18,7 @@ import com.datechnologies.androidtest.R;
  * */
 
 public class AnimationActivity extends AppCompatActivity {
+    AnimatedLogoView logoImageView;
 
     //==============================================================================================
     // Class Properties
@@ -45,17 +48,28 @@ public class AnimationActivity extends AppCompatActivity {
         assert actionBar != null;
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setDisplayShowHomeEnabled(true);
+        logoImageView = findViewById(R.id.animation_logo);
 
-        // TODO: Make the UI look like it does in the mock-up. Allow for horizontal screen rotation.
-        // TODO: Add a ripple effect when the buttons are clicked
+        // DONE: Make the UI look like it does in the mock-up. Allow for horizontal screen rotation.
+        // DONE: Add a ripple effect when the buttons are clicked
 
-        // TODO: When the fade button is clicked, you must animate the D & A Technologies logo.
-        // TODO: It should fade from 100% alpha to 0% alpha, and then from 0% alpha to 100% alpha
+        // DONE: When the fade button is clicked, you must animate the D & A Technologies logo.
+        // DONE: It should fade from 100% alpha to 0% alpha, and then from 0% alpha to 100% alpha
 
-        // TODO: The user should be able to touch and drag the D & A Technologies logo around the screen.
+        // DONE: The user should be able to touch and drag the D & A Technologies logo around the screen.
 
         // TODO: Add a bonus to make yourself stick out. Music, color, fireworks, explosions!!!
     }
+
+    public void onFadeInButtonClicked(View v) {
+        ObjectAnimator animation = ObjectAnimator.ofFloat(logoImageView, "alpha", 0f);
+        ObjectAnimator animation2 = ObjectAnimator.ofFloat(logoImageView, "alpha", 1f);
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.playSequentially(animation, animation2);
+        animatorSet.setDuration(2000);
+        animatorSet.start();
+    }
+
 
     // Button animations to move to previous (back) activity
     @Override

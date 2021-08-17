@@ -104,11 +104,10 @@ public class ChatActivity extends AppCompatActivity {
             }
         });
 
-        // TODO: Make the UI look like it does in the mock-up. Allow for horizontal screen rotation.
+        // DONE: Make the UI look like it does in the mock-up. Allow for horizontal screen rotation.
 
         // DONE: Retrieve the chat data from http://dev.rapptrlabs.com/Tests/scripts/chat_log.php
         // DONE: Parse this chat data from JSON into ChatLogMessageModel and display it.
-
     }
 
     // Button animations to move to previous (back) activity
